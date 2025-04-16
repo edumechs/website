@@ -37,12 +37,31 @@ p {
 button,
 input[type='button'] {
 	border-radius: 2rem;
-	height: 2.5rem;
-	padding: 0 1rem;
+	/* height: 2.5rem; */
+	padding: 1rem 1.5rem;
 
-	font-size: 14px;
+	font-size: 1rem;
 
 	border: none;
+	cursor: pointer;
+
+	transition: 250ms background-color;
+}
+
+button:hover {
+	background-color: #1a143b !important;
+}
+
+button:active {
+	background-color: #2d2272 !important;
+	/* outline: none; */
+}
+
+:root {
+	--accent: #080522;
+	--accent-hover: #130b3c;
+	--accent-focus: #1e114e;
+	--accent-text: #ffffff;
 }
 
 /* Theme Styles */

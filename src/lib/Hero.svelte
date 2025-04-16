@@ -23,8 +23,8 @@
 
 <style>
 	video {
-		isolation: isolate !important;
-		-webkit-appearance: none !important;
+		/* isolation: isolate !important;
+		-webkit-appearance: none !important; */
 	}
 	.canv {
 		width: 500px;

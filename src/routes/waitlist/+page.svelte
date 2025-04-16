@@ -16,7 +16,7 @@
 		};
 
 		try {
-			const response = await fetch('http://localhost:8787/api/waitlist', {
+			const response = await fetch('https://waitlist.afrmtbl627.workers.dev/api/waitlist', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
