@@ -1,8 +1,22 @@
 <script>
 	import Nav from '$lib/Nav.svelte';
+	import WaitlistSuccess from '$lib/WaitlistSuccess.svelte';
+
+	let waitlistPending = false;
+
+	const waitlistEndpoint = 'https://waitlist.afrmtbl627.workers.dev/api/waitlist';
+
+	let waitlistDialog;
+	let dialogOpen = false;
 
 	async function addUserToWaitlist(event) {
-		event.preventDefault(); // Prevent form from refreshing the page
+		if (waitlistPending) {
+			return;
+		}
+
+		waitlistPending = true;
+
+		event.preventDefault();
 
 		const form = event.target;
 		const fullname = form.fullname.value;
@@ -16,7 +30,7 @@
 		};
 
 		try {
-			const response = await fetch('https://waitlist.afrmtbl627.workers.dev/api/waitlist', {
+			const response = await fetch(waitlistEndpoint, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -29,16 +43,21 @@
 			}
 
 			const result = await response.json();
+			dialogOpen = true;
 			console.log('Success:', result);
-			// Optional: show success message to user
 		} catch (error) {
 			console.error('Error:', error);
-			// Optional: show error message to user
+		} finally {
+			waitlistPending = false;
+			form.reset();
 		}
 	}
 </script>
 
 <Nav />
+
+<WaitlistSuccess bind:opened={dialogOpen} onClose={() => (dialogOpen = false)} />
+
 <main class="fade-in-up">
 	<h1>Join the Waitlist</h1>
 	<p>We'll send updates on our progress and share more about our plan for STEM education</p>
@@ -50,7 +69,33 @@
 			<input id="marketing_consent" name="marketing_consent" type="checkbox" />
 			<label for="marketing_consent">Send me promotional emails</label>
 		</div>
-		<button id="submit" class="primary">Join Now</button>
+		<button id="submit" class="primary" disabled={waitlistPending}>
+			{#if waitlistPending}
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="white"
+					><style>
+						.spinner_P7sC {
+							transform-origin: center;
+							animation: spinner_svv2 0.75s infinite linear;
+						}
+						@keyframes spinner_svv2 {
+							100% {
+								transform: rotate(360deg);
+							}
+						}
+					</style><path
+						d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+						class="spinner_P7sC"
+					/></svg
+				>
+			{:else}
+				Join Now
+			{/if}
+		</button>
 	</form>
 </main>
 
@@ -101,6 +146,11 @@
 
 	#submit {
 		margin-top: 1rem;
+	}
+
+	button:disabled {
+		opacity: 0.5;
+		pointer-events: none;
 	}
 
 	.marketing-consent {

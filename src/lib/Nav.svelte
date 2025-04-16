@@ -14,8 +14,8 @@
 			/>
 		</a>
 		<ul>
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Our Mission</a></li>
+			<!-- <li><a href="#">About Us</a></li> -->
+			<!-- <li><a href="#">Our Mission</a></li> -->
 			<li><a href={`${base}/waitlist`}>Waitlist</a></li>
 		</ul>
 	</div>

@@ -30,10 +30,7 @@
 
 		transition: 250ms width;
 	}
-	.canv {
-		width: 500px;
-		height: 300px;
-	}
+
 	section {
 		display: flex;
 		flex-flow: row nowrap;
