@@ -1,5 +1,6 @@
 <script>
 	import Model from './Model.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <section class="fade-in-up">
@@ -10,7 +11,9 @@
 			educational environments, our mechatronics cell makes industrial-grade learning accessible,
 			affordable, and engaging.
 		</p>
-		<button class="primary">Join the Waitlist</button>
+		<a href="{base}/waitlist">
+			<button class="primary">Join the Waitlist</button>
+		</a>
 	</div>
 
 	<video src="cell.mp4" muted autoplay loop playsinline></video>

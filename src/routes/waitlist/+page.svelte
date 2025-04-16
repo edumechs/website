@@ -44,8 +44,8 @@
 	<p>We'll send updates on our progress and share more about our plan for STEM education</p>
 
 	<form onsubmit={(form) => addUserToWaitlist(form)}>
-		<input type="text" name="fullname" placeholder="Full name..." />
-		<input type="email" name="email" placeholder="Email address..." />
+		<input type="text" name="fullname" placeholder="Full name..." required />
+		<input type="email" name="email" placeholder="Email address..." required />
 		<div class="marketing-consent">
 			<input id="marketing_consent" name="marketing_consent" type="checkbox" />
 			<label for="marketing_consent">Send me promotional emails</label>
