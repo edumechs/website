@@ -1,12 +1,16 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <nav>
 	<div>
-		<a href="/">
-			<img src="Logo.png" width="148px" alt="Cog with EDU MECHS text in blue" />
+		<a href={`${base}/`}>
+			<img src={`${base}/Logo.png`} width="148px" alt="Cog with EDU MECHS text in blue" />
 		</a>
 		<ul>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Our Mission</a></li>
-			<li><a href="/waitlist">Waitlist</a></li>
+			<li><a href={`${base}/waitlist`}>Waitlist</a></li>
 		</ul>
 	</div>
 	<button class="primary">Contact Us</button>

@@ -1,7 +1,5 @@
 <script>
-	import { Canvas } from '@threlte/core';
 	import Model from './Model.svelte';
-	import Scene from './Scene.svelte';
 </script>
 
 <section>
@@ -19,7 +17,7 @@
 		<video width="400px" src="out.mp4" muted autoplay loop></video>
 	</div>
 
-	<!-- <Model /> -->
+	<Model />
 </section>
 
 <style>

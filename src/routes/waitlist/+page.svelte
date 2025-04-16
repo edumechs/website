@@ -1,5 +1,4 @@
 <script>
-	import ModelCanvas from '$lib/ModelCanvas.svelte';
 	import Nav from '$lib/Nav.svelte';
 
 	function addUserToWaitlist(e) {
