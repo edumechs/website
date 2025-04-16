@@ -20,7 +20,9 @@
 		</ul>
 	</div>
 	<MobileMenu />
-	<button class="primary">Contact Us</button>
+	<a href="{base}/contact" class="contact-link">
+		<button class="primary">Contact Us</button>
+	</a>
 </nav>
 
 <style>
@@ -75,7 +77,7 @@
 			display: none;
 		}
 
-		.primary {
+		.contact-link {
 			display: none;
 		}
 	}

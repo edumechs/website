@@ -54,13 +54,17 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Join the Waitlist</title>
+</svelte:head>
+
 <Nav />
 
 <WaitlistSuccess bind:opened={dialogOpen} onClose={() => (dialogOpen = false)} />
 
 <main class="fade-in-up">
 	<h1>Join the Waitlist</h1>
-	<p>We'll send updates on our progress and share more about our plan for STEM education</p>
+	<p>We'll send updates on our progress and share more about our plan for STEM education.</p>
 
 	<form onsubmit={(form) => addUserToWaitlist(form)}>
 		<input type="text" name="fullname" placeholder="Full name..." required />
