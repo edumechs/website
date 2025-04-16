@@ -1,11 +1,17 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import MobileMenu from './MobileMenu.svelte';
 </script>
 
 <nav>
 	<div>
 		<a href={`${base}/`}>
-			<img src={`${base}/Logo.png`} width="148px" alt="Cog with EDU MECHS text in blue" />
+			<img
+				src={`${base}/Logo.png`}
+				loading="eager"
+				width="148px"
+				alt="Cog with EDU MECHS text in blue"
+			/>
 		</a>
 		<ul>
 			<li><a href="#">About Us</a></li>
@@ -13,6 +19,7 @@
 			<li><a href={`${base}/waitlist`}>Waitlist</a></li>
 		</ul>
 	</div>
+	<MobileMenu />
 	<button class="primary">Contact Us</button>
 </nav>
 
@@ -35,7 +42,6 @@
 	img {
 		margin-right: 2rem;
 	}
-
 	ul {
 		display: flex;
 		align-items: center;
@@ -58,5 +64,19 @@
 
 	li a:hover {
 		text-decoration: underline;
+	}
+
+	.primary {
+		padding: 0.75rem 1rem;
+	}
+
+	@media screen and (max-width: 1024px) {
+		ul {
+			display: none;
+		}
+
+		.primary {
+			display: none;
+		}
 	}
 </style>

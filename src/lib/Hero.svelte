@@ -2,7 +2,7 @@
 	import Model from './Model.svelte';
 </script>
 
-<section>
+<section class="fade-in-up">
 	<div>
 		<h1>Wiring the <span class="highlight">next generation</span></h1>
 		<p>
@@ -24,6 +24,8 @@
 		-webkit-appearance: none !important; */
 		border-radius: 8px;
 		width: 400px;
+
+		transition: 250ms width;
 	}
 	.canv {
 		width: 500px;
@@ -60,9 +62,15 @@
 		color: var(--highlight-text);
 	}
 
-	@media screen and (max-width: 700px) {
+	@media screen and (max-width: 1280px) {
+		video {
+			width: 350px;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
 		section {
-			padding: 4rem 1rem;
+			padding: 6rem 1rem;
 			height: unset;
 			max-height: unset;
 			flex-flow: column nowrap;

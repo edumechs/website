@@ -39,7 +39,7 @@
 </script>
 
 <Nav />
-<main>
+<main class="fade-in-up">
 	<h1>Join the Waitlist</h1>
 	<p>We'll send updates on our progress and share more about our plan for STEM education</p>
 
