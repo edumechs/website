@@ -19,11 +19,11 @@
 	<div class="emails">
 		<div>
 			<p class="title">Andrew</p>
-			<p>andrew@edumechs.ca</p>
+			<p class="email">andrew@edumechs.ca</p>
 		</div>
 		<div>
 			<p class="title">Reyhan</p>
-			<p>reyhan@edumechs.ca</p>
+			<p class="email">reyhan@edumechs.ca</p>
 		</div>
 	</div>
 </main>
@@ -59,6 +59,12 @@
 		gap: 3rem;
 
 		margin-top: 2.5rem;
+	}
+
+	.email {
+		-moz-user-select: all;
+		-webkit-user-select: all;
+		user-select: all;
 	}
 
 	p {
