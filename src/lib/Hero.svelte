@@ -13,10 +13,7 @@
 		<button class="primary">Join the Waitlist</button>
 	</div>
 
-	<div class="canv">
-		<video width="400px" height="240px" src="cellscaled.webm" muted autoplay loop playsinline
-		></video>
-	</div>
+	<video src="cell.mp4" muted autoplay loop playsinline></video>
 
 	<!-- <Model /> -->
 </section>
@@ -25,6 +22,8 @@
 	video {
 		/* isolation: isolate !important;
 		-webkit-appearance: none !important; */
+		border-radius: 8px;
+		width: 400px;
 	}
 	.canv {
 		width: 500px;
@@ -53,11 +52,29 @@
 		max-width: 600px;
 	}
 
-	.secondary {
-		margin-top: 1.5rem;
+	.primary {
+		margin-top: 1rem;
 	}
 
 	.highlight {
 		color: var(--highlight-text);
+	}
+
+	@media screen and (max-width: 700px) {
+		section {
+			padding: 4rem 1rem;
+			height: unset;
+			max-height: unset;
+			flex-flow: column nowrap;
+
+			justify-content: center;
+			align-items: center;
+
+			text-align: center;
+		}
+
+		video {
+			width: 300px;
+		}
 	}
 </style>

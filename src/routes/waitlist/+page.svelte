@@ -62,6 +62,8 @@
 		align-items: center;
 		margin: 6rem auto;
 		max-width: 600px;
+
+		padding: 0rem 1rem;
 	}
 
 	p {
@@ -73,15 +75,16 @@
 		flex-flow: column nowrap;
 		max-width: 400px;
 		margin-top: 2.5rem;
+		width: 100%;
 
 		gap: 1rem;
 	}
 
 	input[type='text'],
 	input[type='email'] {
-		width: 400px;
+		width: 100%;
 		padding: 1rem 1rem;
-		font-size: 14px;
+		font-size: 1rem;
 		border-radius: 8px;
 		border: 1px solid var(--input-border-color);
 		color: var(--accent);
