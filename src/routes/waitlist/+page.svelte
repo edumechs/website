@@ -1,9 +1,40 @@
 <script>
 	import Nav from '$lib/Nav.svelte';
 
-	function addUserToWaitlist(e) {
-		e.preventDefault();
-		console.log(e);
+	async function addUserToWaitlist(event) {
+		event.preventDefault(); // Prevent form from refreshing the page
+
+		const form = event.target;
+		const fullname = form.fullname.value;
+		const email = form.email.value;
+		const marketingConsent = form.marketing_consent.checked;
+
+		const body = {
+			fullname,
+			email,
+			marketing_consent: marketingConsent
+		};
+
+		try {
+			const response = await fetch('http://localhost:8787/api/waitlist', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(body)
+			});
+
+			if (!response.ok) {
+				throw new Error(`Server error: ${response.status}`);
+			}
+
+			const result = await response.json();
+			console.log('Success:', result);
+			// Optional: show success message to user
+		} catch (error) {
+			console.error('Error:', error);
+			// Optional: show error message to user
+		}
 	}
 </script>
 
@@ -13,10 +44,10 @@
 	<p>We'll send updates on our progress and share more about our plan for STEM education</p>
 
 	<form onsubmit={(form) => addUserToWaitlist(form)}>
-		<input type="text" placeholder="Full name..." />
-		<input type="email" placeholder="Email address..." />
+		<input type="text" name="fullname" placeholder="Full name..." />
+		<input type="email" name="email" placeholder="Email address..." />
 		<div class="marketing-consent">
-			<input id="marketing_consent" type="checkbox" />
+			<input id="marketing_consent" name="marketing_consent" type="checkbox" />
 			<label for="marketing_consent">Send me promotional emails</label>
 		</div>
 		<button id="submit" class="primary">Join Now</button>

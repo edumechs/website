@@ -10,17 +10,22 @@
 			educational environments, our mechatronics cell makes industrial-grade learning accessible,
 			affordable, and engaging.
 		</p>
-		<button class="secondary">Join the Waitlist</button>
+		<button class="primary">Join the Waitlist</button>
 	</div>
 
 	<div class="canv">
-		<video width="400px" src="out.mp4" muted autoplay loop></video>
+		<video width="400px" height="240px" src="cellscaled.webm" muted autoplay loop playsinline
+		></video>
 	</div>
 
-	<Model />
+	<!-- <Model /> -->
 </section>
 
 <style>
+	video {
+		isolation: isolate !important;
+		-webkit-appearance: none !important;
+	}
 	.canv {
 		width: 500px;
 		height: 300px;
@@ -39,12 +44,12 @@
 	}
 
 	h1 {
-		color: var(--light-text);
+		color: var(--accent);
 		margin: 0;
 	}
 
 	p {
-		color: var(--light-text);
+		color: var(--accent);
 		max-width: 600px;
 	}
 
@@ -54,9 +59,5 @@
 
 	.highlight {
 		color: var(--highlight-text);
-	}
-
-	video {
-		border: none;
 	}
 </style>
