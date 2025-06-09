@@ -2,12 +2,12 @@
 	import Nav from '$lib/Nav.svelte';
 	import WaitlistSuccess from '$lib/WaitlistSuccess.svelte';
 
-	let waitlistPending = false;
+	let waitlistPending = $state(false);
 
 	const waitlistEndpoint = 'https://waitlist.afrmtbl627.workers.dev/api/waitlist';
 
 	let waitlistDialog;
-	let dialogOpen = false;
+	let dialogOpen = $state(false);
 
 	async function addUserToWaitlist(event) {
 		if (waitlistPending) {

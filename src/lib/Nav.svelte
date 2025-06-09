@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import MobileMenu from './MobileMenu.svelte';
+	import { base } from "$app/paths";
+	import MobileMenu from "./MobileMenu.svelte";
 </script>
 
 <nav>
@@ -14,7 +14,7 @@
 			/>
 		</a>
 		<ul>
-			<!-- <li><a href="#">About Us</a></li> -->
+			<!-- <li><a href={`${base}/about`}>About</a></li> -->
 			<!-- <li><a href="#">Our Mission</a></li> -->
 			<li><a href={`${base}/waitlist`}>Waitlist</a></li>
 		</ul>

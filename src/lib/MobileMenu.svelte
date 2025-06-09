@@ -1,7 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 
-	let open = false;
+	let open = $state(false);
 </script>
 
 <div class="hamburger {open ? 'open' : ''}" on:click={() => (open = !open)}>
