@@ -1,0 +1,1 @@
+import{C as S,D as h,F as k,G as T,S as c}from"./DiIMByQm.js";function t(r,i){return r===i||(r==null?void 0:r[c])===i}function A(r={},i,a,q){return S(()=>{var f,s;return h(()=>{f=s,s=[],T(()=>{r!==a(...s)&&(i(r,...s),f&&t(a(...f),r)&&i(null,...f))})}),()=>{k(()=>{s&&t(a(...s),r)&&i(null,...s)})}}),r}export{A as b};
