@@ -1,10 +1,10 @@
 <script>
-	import Nav from '$lib/Nav.svelte';
-	import WaitlistSuccess from '$lib/WaitlistSuccess.svelte';
+	import Nav from "$lib/Nav.svelte";
+	import WaitlistSuccess from "$lib/WaitlistSuccess.svelte";
 
 	let waitlistPending = $state(false);
 
-	const waitlistEndpoint = 'https://waitlist.afrmtbl627.workers.dev/api/waitlist';
+	const waitlistEndpoint = "https://waitlist.afrmtbl627.workers.dev/api/waitlist";
 
 	let waitlistDialog;
 	let dialogOpen = $state(false);
@@ -31,9 +31,9 @@
 
 		try {
 			const response = await fetch(waitlistEndpoint, {
-				method: 'POST',
+				method: "POST",
 				headers: {
-					'Content-Type': 'application/json'
+					"Content-Type": "application/json"
 				},
 				body: JSON.stringify(body)
 			});
@@ -44,9 +44,9 @@
 
 			const result = await response.json();
 			dialogOpen = true;
-			console.log('Success:', result);
+			console.log("Success:", result);
 		} catch (error) {
-			console.error('Error:', error);
+			console.error("Error:", error);
 		} finally {
 			waitlistPending = false;
 			form.reset();
@@ -129,7 +129,7 @@
 		gap: 1rem;
 	}
 
-	input[type='text'],
+	/* input[type='text'],
 	input[type='email'] {
 		width: 100%;
 		padding: 1rem 1rem;
@@ -146,7 +146,7 @@
 	input[type='checkbox'] {
 		transform: scale(1.5);
 		border-radius: 8px;
-	}
+	} */
 
 	#submit {
 		margin-top: 1rem;

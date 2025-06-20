@@ -6,6 +6,7 @@
       "dependencies": {
         "@sveltejs/adapter-static": "^3.0.8",
         "gsap": "^3.13.0",
+        "pdfjs-dist": "^5.3.31",
       },
       "devDependencies": {
         "@eslint/compat": "^1.2.9",
@@ -156,6 +157,28 @@
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.0", "", {}, "sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ=="],
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
+
+    "@napi-rs/canvas": ["@napi-rs/canvas@0.1.71", "", { "optionalDependencies": { "@napi-rs/canvas-android-arm64": "0.1.71", "@napi-rs/canvas-darwin-arm64": "0.1.71", "@napi-rs/canvas-darwin-x64": "0.1.71", "@napi-rs/canvas-linux-arm-gnueabihf": "0.1.71", "@napi-rs/canvas-linux-arm64-gnu": "0.1.71", "@napi-rs/canvas-linux-arm64-musl": "0.1.71", "@napi-rs/canvas-linux-riscv64-gnu": "0.1.71", "@napi-rs/canvas-linux-x64-gnu": "0.1.71", "@napi-rs/canvas-linux-x64-musl": "0.1.71", "@napi-rs/canvas-win32-x64-msvc": "0.1.71" } }, "sha512-92ybDocKl6JM48ZpYbj+A7Qt45IaTABDk0y3sDecEQfgdhfNzJtEityqNHoCZ4Vty2dldPkJhxgvOnbrQMXTTA=="],
+
+    "@napi-rs/canvas-android-arm64": ["@napi-rs/canvas-android-arm64@0.1.71", "", { "os": "android", "cpu": "arm64" }, "sha512-cxi3VCotIOS9kNFQI7dcysbVJi106pxryVY1Hi85pX+ZeqahRyeqc/NsLaZ998Ae99+F3HI5X/39G1Y/Byrf0A=="],
+
+    "@napi-rs/canvas-darwin-arm64": ["@napi-rs/canvas-darwin-arm64@0.1.71", "", { "os": "darwin", "cpu": "arm64" }, "sha512-7Y4D/6vIuMLYsVNtRM/w2j0+fB1GyqeOxc7I0BTx8eLP1S6BZE2Rj6zJfdG+zmLEOW0IlHa+VQq1q2MUAjW84w=="],
+
+    "@napi-rs/canvas-darwin-x64": ["@napi-rs/canvas-darwin-x64@0.1.71", "", { "os": "darwin", "cpu": "x64" }, "sha512-Z0IUqxclrYdfVt/SK9nKCzUHTOXKTWiygtO71YCzs0OtxKdNI7GJRJdYG48wXZEDQ/pqTF4F7Ifgtidfc2tYpg=="],
+
+    "@napi-rs/canvas-linux-arm-gnueabihf": ["@napi-rs/canvas-linux-arm-gnueabihf@0.1.71", "", { "os": "linux", "cpu": "arm" }, "sha512-KlpqqCASak5ruY+UIolJgmhMZ9Pa2o1QyaNu648L8sz4WNBbNa+aOT60XCLCL1VIKLv11B3MlNgiOHoYNmDhXQ=="],
+
+    "@napi-rs/canvas-linux-arm64-gnu": ["@napi-rs/canvas-linux-arm64-gnu@0.1.71", "", { "os": "linux", "cpu": "arm64" }, "sha512-bdGZCGu8YQNAiu3nkIVVUp6nIn6fPd36IuZsLXTG027E52KyIuZ3obCxehSwjDIUNkFWvmff5D6JYfWwAoioEw=="],
+
+    "@napi-rs/canvas-linux-arm64-musl": ["@napi-rs/canvas-linux-arm64-musl@0.1.71", "", { "os": "linux", "cpu": "arm64" }, "sha512-1R5sMWe9ur8uM+hAeylBwG0b6UHDR+iWQNgzXmF9vbBYRooQvmDWqpcgytKLJAC0vnWhIkKwqd7yExn7cwczmg=="],
+
+    "@napi-rs/canvas-linux-riscv64-gnu": ["@napi-rs/canvas-linux-riscv64-gnu@0.1.71", "", { "os": "linux", "cpu": "none" }, "sha512-xjjKsipueuG+LdKIk6/uAlqdo+rzGcmNpTZPXdakIT1sHX4NNSnQTzjRaj9Gh96Czjd9G89UWR0KIlE7fwOgFA=="],
+
+    "@napi-rs/canvas-linux-x64-gnu": ["@napi-rs/canvas-linux-x64-gnu@0.1.71", "", { "os": "linux", "cpu": "x64" }, "sha512-3s6YpklXDB4OeeULG1XTRyKrKAOo7c3HHEqM9A6N4STSjMaJtzmpp7tB/JTvAFeOeFte6gWN8IwC+7AjGJ6MpQ=="],
+
+    "@napi-rs/canvas-linux-x64-musl": ["@napi-rs/canvas-linux-x64-musl@0.1.71", "", { "os": "linux", "cpu": "x64" }, "sha512-5v9aCLzCXw7u10ray5juQMdl7TykZSn1X5AIGYwBvTAcKSgrqaR9QkRxp1Lqk3njQmFekOW1SFN9bZ/i/6y6kA=="],
+
+    "@napi-rs/canvas-win32-x64-msvc": ["@napi-rs/canvas-win32-x64-msvc@0.1.71", "", { "os": "win32", "cpu": "x64" }, "sha512-oJughk6xjsRIr0Rd9EqjmZmhIMkvcPuXgr3MNn2QexTqn+YFOizrwHS5ha0BDfFl7TEGRvwaDUXBQtu8JKXb8A=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@2.1.5", "", { "dependencies": { "@nodelib/fs.stat": "2.0.5", "run-parallel": "^1.1.9" } }, "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="],
 
@@ -530,6 +553,8 @@
     "pathe": ["pathe@2.0.3", "", {}, "sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w=="],
 
     "pathval": ["pathval@2.0.0", "", {}, "sha512-vE7JKRyES09KiunauX7nd2Q9/L7lhok4smP9RZTDeD4MVs72Dp2qNFVz39Nz5a0FVEW0BJR6C0DYrq6unoziZA=="],
+
+    "pdfjs-dist": ["pdfjs-dist@5.3.31", "", { "optionalDependencies": { "@napi-rs/canvas": "^0.1.67" } }, "sha512-EhPdIjNX0fcdwYQO+e3BAAJPXt+XI29TZWC7COhIXs/K0JHcUt1Gdz1ITpebTwVMFiLsukdUZ3u0oTO7jij+VA=="],
 
     "picocolors": ["picocolors@1.1.1", "", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
 

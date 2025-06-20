@@ -46,6 +46,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.8",
-		"gsap": "^3.13.0"
+		"gsap": "^3.13.0",
+		"pdfjs-dist": "^5.3.31"
 	}
 }

@@ -9,14 +9,11 @@
 
 		const elements = document.querySelectorAll(".fadeinz");
 
-		console.log("creating a new observer");
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					console.log("dsa");
 					if (entry.isIntersecting) {
 						entry.target.classList.add("visible");
-						console.log("unobserving!");
 						observer.unobserve(entry.target);
 					}
 				});
