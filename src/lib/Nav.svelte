@@ -14,7 +14,7 @@
 			/>
 		</a>
 		<ul>
-			<!-- <li><a href={`${base}/about`}>About</a></li> -->
+			<li><a href={`${base}/about`}>About Us</a></li>
 			<!-- <li><a href="#">Our Mission</a></li> -->
 			<li><a href={`${base}/waitlist`}>Waitlist</a></li>
 		</ul>
@@ -66,10 +66,6 @@
 
 	li a:hover {
 		text-decoration: underline;
-	}
-
-	.primary {
-		padding: 0.75rem 1rem;
 	}
 
 	@media screen and (max-width: 1024px) {

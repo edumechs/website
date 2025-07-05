@@ -3,6 +3,7 @@
 
 	let { children } = $props();
 	import { page } from "$app/state";
+	import Footer from "$lib/Footer.svelte";
 
 	$effect(() => {
 		page.url.pathname;
@@ -33,6 +34,9 @@
 
 <div id="smooth-wrapper">
 	<div id="smooth-content">
-		{@render children()}
+		<div class="page-content">
+			{@render children()}
+		</div>
+		<Footer />
 	</div>
 </div>

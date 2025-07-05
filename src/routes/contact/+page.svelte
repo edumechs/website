@@ -1,6 +1,5 @@
 <script>
-	import { base } from '$app/paths';
-	import Nav from '$lib/Nav.svelte';
+	import Nav from "$lib/Nav.svelte";
 </script>
 
 <svelte:head>
@@ -86,8 +85,8 @@
 		gap: 1rem;
 	}
 
-	input[type='text'],
-	input[type='email'] {
+	input[type="text"],
+	input[type="email"] {
 		width: 100%;
 		padding: 1rem 1rem;
 		font-size: 1rem;
@@ -100,7 +99,7 @@
 		}
 	}
 
-	input[type='checkbox'] {
+	input[type="checkbox"] {
 		transform: scale(1.5);
 		border-radius: 8px;
 	}

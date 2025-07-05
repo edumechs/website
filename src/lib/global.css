@@ -108,7 +108,7 @@ button.secondary:active {
 
 .highlight-it {
 	color: #6da5fe;
-	font-style: italic;
+	/* font-style: italic; */
 }
 
 .highlight {
@@ -164,4 +164,8 @@ input[type="email"] {
 input[type="checkbox"] {
 	transform: scale(1.5);
 	border-radius: 8px;
+}
+
+.page-content {
+	min-height: 700px;
 }

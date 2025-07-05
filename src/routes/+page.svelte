@@ -13,6 +13,10 @@
 	import CellAnim from "$lib/CellAnim.svelte";
 </script>
 
+<svelte:head>
+	<title>EDU MECHS: Wiring the next generation</title>
+</svelte:head>
+
 <Nav />
 <Hero />
 

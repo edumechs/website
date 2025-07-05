@@ -1,5 +1,5 @@
 <script>
-	import { base } from '$app/paths';
+	import { base } from "$app/paths";
 
 	let open = $state(false);
 </script>
@@ -14,7 +14,7 @@
 
 <nav class="menu-container {open ? 'open' : ''}">
 	<ul>
-		<!-- <li><a href="#">About Us</a></li> -->
+		<li><a href="about">About Us</a></li>
 		<!-- <li><a href="#">Our Mission</a></li> -->
 		<li><a href={`${base}/waitlist`}>Waitlist</a></li>
 		<li><a href={`${base}/contact`}>Contact</a></li>

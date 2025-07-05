@@ -1,6 +1,13 @@
 <script>
 	import { base } from "$app/paths";
 	import Nav from "$lib/Nav.svelte";
+
+	const chartMap = [
+		{ year: 2025, value: 21 },
+		{ year: 2024, value: 17 },
+		{ year: 2023, value: 16 },
+		{ year: 2022, value: 9 }
+	];
 </script>
 
 <svelte:head>
@@ -16,14 +23,14 @@
 			We're on a mission to make technical education accessible, practical, and exciting through
 			interactive tools built for modern STEM education. For every student, in every classroom.
 		</p>
-		<img class="big" src="" />
-		<img class="big" src="" />
+		<!-- <img class="big" src="" /> -->
+		<!-- <img class="big" src="" /> -->
 	</section>
 
 	<section class="who">
 		<div class="content-container">
-			<p>Who we are</p>
-			<div class="boy">
+			<p class="pretext">Who we are</p>
+			<div class="boy fadeinz">
 				<div>
 					<h2>Reyhan Tresslar</h2>
 					<p>
@@ -42,10 +49,10 @@
 						design, and more.
 					</p>
 				</div>
-				<img class="big" src="reyhan.jpg" />
+				<img class="big" src="reyhan.jpeg" />
 			</div>
 
-			<div class="boy reverse">
+			<div class="boy reverse fadeinz">
 				<div>
 					<h2>Andrew Allan</h2>
 					<p>
@@ -64,13 +71,13 @@
 						design, and more.
 					</p>
 				</div>
-				<img class="big" src="andrew.jpg" />
+				<img class="big" src="andrew.jpeg" />
 			</div>
 		</div>
 	</section>
 
 	<section class="mission">
-		<div class="content-container">
+		<div class="content-container fadeinz">
 			<h2>Our Mission</h2>
 			<p>
 				In classrooms and workshops, we&apos;d often show educators the learning kits we were using
@@ -90,10 +97,10 @@
 	</section>
 
 	<section class="values">
-		<div class="content-container">
+		<div class="content-container fadeinz">
 			<h2>Our Values</h2>
 
-			<div>
+			<div class="table">
 				<div class="value-container">
 					<span class="number">01</span>
 					<span class="value">Hands-on Learning</span>
@@ -126,8 +133,8 @@
 
 	<section class="emotion">
 		<div class="content-container">
-			<p>Why it matters</p>
-			<div class="reading">
+			<p class="pretext">Why it matters</p>
+			<div class="reading fadeinz">
 				<h2>
 					Young people are increasingly<br /><span class="highlight-it"
 						>dismissing skilled trades</span
@@ -142,38 +149,37 @@
 					As older workers retire and technology transforms the trades, the gap between opportunity
 					and awareness is only getting wider.
 				</p>
-			</div>
+				<div class="stats-row fadeinz">
+					<div class="stat">
+						<span class="stat-percent highlight">16<span class="perc">%</span></span>
+						<p class="stat-text">
+							Only 16% of young people consider skilled trades as a career. Many aren&apos;t even
+							aware that it&apos;s an option
+						</p>
+					</div>
 
-			<div class="stats-row">
-				<div class="stat">
-					<span class="stat-percent highlight">16<span class="perc">%</span></span>
-					<p class="stat-text">
-						Only 16% of young people consider skilled trades as a career. Many aren&apos;t even
-						aware that it&apos;s an option
-					</p>
-				</div>
-
-				<div class="stat">
-					<span class="stat-percent highlight">10<span class="perc">%</span></span>
-					<p class="stat-text">
-						There&apos;s been a 10% drop among 9-12 year old children with interest in skilled
-						trades
-					</p>
-				</div>
-				<div class="stat">
-					<span class="stat-percent highlight">50<span class="perc">%</span></span>
-					<p class="stat-text">
-						Even amongst young people who are interested, over 50% lack professional development
-						opportunities
-					</p>
+					<div class="stat">
+						<span class="stat-percent highlight">10<span class="perc">%</span></span>
+						<p class="stat-text">
+							There&apos;s been a 10% drop among 9-12 year old children with interest in skilled
+							trades
+						</p>
+					</div>
+					<div class="stat">
+						<span class="stat-percent highlight">50<span class="perc">%</span></span>
+						<p class="stat-text">
+							Even amongst young people who are interested, over 50% lack professional development
+							opportunities
+						</p>
+					</div>
 				</div>
 			</div>
 
 			<div class="icon-reading">
-				<div class="icon">
+				<!-- <div class="icon">
 					<img width="128px" src={`${base}/opportunity.svg`} />
-				</div>
-				<div class="reading">
+				</div> -->
+				<div class="reading fadeinz">
 					<h2>
 						Lack of exposure is a <span class="highlight-it">lifelong missed opportunity</span>
 					</h2>
@@ -188,10 +194,10 @@
 			</div>
 
 			<div class="icon-reading">
-				<div class="icon">
+				<!-- <div class="icon">
 					<img width="128px" src={`${base}/retire.svg`} />
-				</div>
-				<div class="reading">
+				</div> -->
+				<div class="reading retire fadeinz">
 					<h2>
 						<span class="highlight-it">700 000+</span> skilled trades workers expected to
 						<span class="highlight-it">retire by 2028</span>
@@ -201,12 +207,39 @@
 						are expected to leave the workforce by 2028. This isn't just a labour shortage; it's a
 						knowledge gap.
 					</p>
+					<div class="chart">
+						<p><strong>Reported skill gaps</strong></p>
+						{#each chartMap as { year, value }, i}
+							<div class="entry">
+								<span>{year}</span>
+								<div class="bar" class:current={year === 2025} style:width={`${value * 2}%`}>
+									{value}%
+								</div>
+							</div>
+						{/each}
+					</div>
 					<p>
 						As experienced technicians age out, there's an urgent need to prepare the next
 						generation with the hands-on skills that keep our industries running.
 					</p>
 				</div>
 			</div>
+		</div>
+	</section>
+	<section class="commitment">
+		<div class="content-container fadeinz">
+			<h2>Our Commitment to Educators</h2>
+			<p>
+				We built EDU MECHS to remove the barriers that keep students from experiencing technical
+				education firsthand. We're not just building learning kits—we're building access,
+				confidence, and curiosity. Every part of EDU MECHS is designed to support educators and
+				spark lasting engagement in technical careers.
+			</p>
+			<p>
+				We believe students learn best when they can see how things work, touch the components, and
+				connect learning to the real world. That's why everything we create is hands-on,
+				classroom-ready, and built to grow with your teaching.
+			</p>
 		</div>
 	</section>
 </main>
@@ -221,12 +254,62 @@
 		/* max-width: 600px; */
 
 		/* padding: 0rem 1rem; */
+
+		--reading-padding: 16rem;
 	}
 
 	.content-container {
 		width: 100%;
 		max-width: 1000px;
 		margin: 0 auto;
+	}
+
+	.bar {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		padding-right: 0.5rem;
+		background-color: #dedaff;
+		border-radius: 8px;
+		height: 36px;
+		opacity: 0.6;
+		/* transition: width 1s; */
+		color: #080522;
+
+		width: 20px;
+
+		&.current {
+			background-color: #6da5fe;
+			color: #dedaff;
+			opacity: 1;
+			font-weight: bold;
+		}
+
+		/* @starting-style {
+			width: 0px;
+		} */
+	}
+
+	@starting-style {
+		.bar {
+			width: 0px !important;
+		}
+	}
+
+	.chart {
+		margin-bottom: 2rem;
+
+		& p {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.chart .entry {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		margin-bottom: 1rem;
+		gap: 1rem;
 	}
 
 	.who .content-container {
@@ -239,13 +322,17 @@
 
 	.hero {
 		max-width: 750px;
+		/* min-height: 600px; */
 		margin: 0 auto;
+		padding: 4rem 0 8rem 0;
+		text-align: center;
 	}
 
 	.stats-row {
 		display: flex;
 
-		margin-bottom: 12rem;
+		margin-top: 4rem;
+		margin-bottom: var(--reading-padding);
 		max-width: 1440px;
 
 		gap: 5rem;
@@ -274,13 +361,21 @@
 		padding: 4rem;
 	}
 
+	.table {
+		padding-top: 1rem;
+	}
+
 	.reading {
 		max-width: 770px;
-		margin-bottom: 12rem;
+		margin-bottom: var(--reading-padding);
 
 		h2 {
 			font-size: 2.5rem;
 		}
+	}
+
+	.reading.retire {
+		margin-bottom: 4rem;
 	}
 
 	.icon {
@@ -301,12 +396,27 @@
 
 	.mission,
 	.values,
+	.commitment,
 	.who {
 		padding: 6rem 10rem;
 
 		p {
 			max-width: 770px;
 		}
+	}
+
+	.commitment {
+		padding: 12rem 10rem;
+		padding-bottom: 6rem;
+	}
+
+	.values {
+		padding-top: 0;
+		padding-bottom: 12rem;
+	}
+
+	.mission {
+		padding-top: 12rem;
 	}
 
 	.value-container {
@@ -343,8 +453,8 @@
 	.boy {
 		display: flex;
 		justify-content: space-between;
-		gap: 1rem;
-		margin-bottom: 16rem;
+		gap: 2rem;
+		margin-bottom: 12rem;
 	}
 	.boy.reverse {
 		flex-flow: row-reverse;
@@ -354,5 +464,59 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 2rem;
+	}
+
+	.icon-reading:nth-child(odd) {
+		justify-content: end;
+	}
+
+	img {
+		object-fit: cover;
+	}
+
+	.pretext {
+		margin: 4rem 0 6rem 0;
+	}
+
+	.content-container h2 {
+		margin-bottom: 2rem;
+	}
+	.content-container {
+		margin-top: 0;
+	}
+
+	@media screen and (max-width: 1000px) {
+		section {
+			padding-left: 4rem !important;
+			padding-right: 4rem !important;
+		}
+		.boy {
+			flex-flow: column nowrap !important;
+		}
+
+		.value-container {
+			display: flex;
+			gap: 2rem;
+
+			padding: 1rem 0;
+
+			border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+			.number {
+				min-width: 88px;
+			}
+			.value {
+				min-width: 160px;
+			}
+
+			.description {
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		.stats-row {
+			flex-flow: row wrap;
+		}
 	}
 </style>
