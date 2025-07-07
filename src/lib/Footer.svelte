@@ -3,7 +3,7 @@
 </script>
 
 <div class="root">
-	<div class="content">
+	<div class="content fade-in-up">
 		<div class="center">
 			<h1>Ready to get started?</h1>
 			<p class="sub">

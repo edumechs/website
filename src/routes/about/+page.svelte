@@ -102,16 +102,20 @@
 
 			<div class="table">
 				<div class="value-container">
-					<span class="number">01</span>
-					<span class="value">Hands-on Learning</span>
+					<div class="left-two">
+						<span class="number">01</span>
+						<span class="value">Hands-on Learning</span>
+					</div>
 					<p class="description">
 						We believe students learn best by doing. Every EDU MECHS tool is designed to give
 						learners real, tactile experience with automation, electronics, and control systems.
 					</p>
 				</div>
 				<div class="value-container">
-					<span class="number">02</span>
-					<span class="value">Built for the Classroom</span>
+					<div class="left-two">
+						<span class="number">02</span>
+						<span class="value">Built for the Classroom</span>
+					</div>
 					<p class="description">
 						From pricing to durability to simplicity, our learning kits are designed with real
 						classrooms in mind. We aim to make advanced technical education accessible to schools of
@@ -119,8 +123,10 @@
 					</p>
 				</div>
 				<div class="value-container">
-					<span class="number">03</span>
-					<span class="value">Empowering Educators</span>
+					<div class="left-two">
+						<span class="number">03</span>
+						<span class="value">Empowering Educators</span>
+					</div>
 					<p class="description">
 						Educators are at the heart of every successful learning experience. We build tools that
 						support, not replace, great teaching, making it easier to deliver engaging, future-ready
@@ -365,6 +371,36 @@
 		padding-top: 1rem;
 	}
 
+	.value-container {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	.left-two {
+		display: flex;
+	}
+
+	.value-container {
+		display: flex;
+		gap: 2rem;
+
+		padding: 1rem 0;
+
+		border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+		.number {
+			min-width: 126px;
+		}
+		.value {
+			min-width: 220px;
+		}
+
+		.description {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
 	.reading {
 		max-width: 770px;
 		margin-bottom: var(--reading-padding);
@@ -376,22 +412,6 @@
 
 	.reading.retire {
 		margin-bottom: 4rem;
-	}
-
-	.icon {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 2rem;
-		background-color: #1c193b;
-		border-radius: 1rem;
-		width: 300px;
-		height: 250px;
-		margin-bottom: 2rem;
-
-		img {
-			width: 160px;
-		}
 	}
 
 	.mission,
@@ -419,31 +439,11 @@
 		padding-top: 12rem;
 	}
 
-	.value-container {
-		display: flex;
-		gap: 2rem;
-
-		padding: 1rem 0;
-
-		border-top: 1px solid rgba(0, 0, 0, 0.2);
-
-		.number {
-			min-width: 126px;
-		}
-		.value {
-			min-width: 220px;
-		}
-
-		.description {
-			padding: 0;
-			margin: 0;
-		}
-	}
-
 	img.big {
-		width: 450px;
-		min-width: 450px;
-		height: 380px;
+		width: 400px;
+		/* min-width: 450px; */
+		/* height: 380px; */
+		aspect-ratio: 450 / 380;
 		background-color: #1c193b;
 		border: none;
 		outline: none;
@@ -487,8 +487,10 @@
 
 	@media screen and (max-width: 1000px) {
 		section {
-			padding-left: 4rem !important;
-			padding-right: 4rem !important;
+			padding-left: 1rem !important;
+			padding-right: 1rem !important;
+			padding-top: 6rem !important;
+			padding-bottom: 2rem !important;
 		}
 		.boy {
 			flex-flow: column nowrap !important;
@@ -498,15 +500,21 @@
 			display: flex;
 			gap: 2rem;
 
+			flex-flow: column nowrap;
+
 			padding: 1rem 0;
 
 			border-top: 1px solid rgba(0, 0, 0, 0.2);
 
 			.number {
-				min-width: 88px;
+				min-width: 40px;
+				font-size: 1.1rem;
+				font-weight: 500;
 			}
 			.value {
-				min-width: 160px;
+				min-width: 120px;
+				font-size: 1.1rem;
+				font-weight: 500;
 			}
 
 			.description {
@@ -517,6 +525,19 @@
 
 		.stats-row {
 			flex-flow: row wrap;
+		}
+
+		img.big {
+			width: 300px;
+			aspect-ratio: 450 / 380;
+			background-color: #1c193b;
+			border: none;
+			outline: none;
+			border-radius: 8px;
+		}
+
+		.hero {
+			padding-top: 0rem !important;
 		}
 	}
 </style>

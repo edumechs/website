@@ -11,6 +11,7 @@
 	import IconOpenJam from "~icons/material-symbols/open-jam-outline";
 	import IconBook from "~icons/material-symbols/book-2-outline";
 	import CellAnim from "$lib/CellAnim.svelte";
+	import { base } from "$app/paths";
 </script>
 
 <svelte:head>
@@ -43,7 +44,7 @@
 				icon: IconAir
 			}
 		]}
-		imgSrc="cell 1.jpg"
+		imgSrc="images/cell_sun.jpg"
 	/>
 	<FeatureGroup
 		title={`Ready for <span style="color: #6DA5FE">educators</span>`}
@@ -72,61 +73,40 @@
 </section>
 
 <section>
-	<!-- <h2>Our Cell</h2>
-	<p>
-		We&apos;ve specifically designed our mechatronics cell with simplified learning and
-		accessibility in mind. Learn at your own pace.
-	</p> -->
-
+	<div class="video-container fade-in-up">
+		<video src={`${base}/videos/cell_showcase.mp4`} autoplay muted loop></video>
+	</div>
 	<CellAnim />
 </section>
 
 <style>
-	.stats {
-		display: flex;
-		flex-flow: column nowrap;
-		text-align: center;
-		padding-top: 6rem;
-
-		justify-content: center;
-		align-items: center;
-
-		& > p {
-			max-width: 600px;
-			align-self: center;
-		}
+	.video-container {
+		height: 450px;
 	}
-	.stats-row {
-		display: flex;
-
-		margin-top: 6rem;
-		max-width: 1440px;
-
-		gap: 5rem;
-	}
-	.stat {
-		display: flex;
-		flex-flow: column nowrap;
-
-		align-items: center;
-	}
-	.stat-percent {
-		font-size: 3.5rem;
-		font-weight: 500;
+	video {
+		object-fit: cover;
+		/* opacity: 0.5; */
+		filter: brightness(30%);
+		width: 101%;
+		height: 101%;
+		transition: filter 1s;
 	}
 
-	.stat-text {
-		max-width: 300px;
-		text-align: center;
-	}
-
-	.perc {
-		font-size: 2rem;
+	video:hover {
+		filter: brightness(70%);
 	}
 
 	.features-1 {
 		background-color: #080522;
 		color: #dedaff;
 		padding: 4rem;
+	}
+
+	@media screen and (max-width: 1000px) {
+		.features-1 {
+			background-color: #080522;
+			color: #dedaff;
+			padding: 4rem 1rem;
+		}
 	}
 </style>

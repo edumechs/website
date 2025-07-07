@@ -1,0 +1,1 @@
+import{h as r,e as c,g as i,E as s,i as h,j as p,k as d}from"./Bu-bbLBY.js";function u(t,f,o){r&&c();var n=t,a,e;i(()=>{a!==(a=f())&&(e&&(p(e),e=null),a&&(e=h(()=>o(n,a))))},s),r&&(n=d)}export{u as c};

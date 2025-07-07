@@ -8,6 +8,13 @@
 	$effect(() => {
 		page.url.pathname;
 
+		if (typeof gtag !== "undefined") {
+			gtag("config", "MEASUREMENT_ID", {
+				page_title: document.title,
+				page_path: page.url.pathname
+			});
+		}
+
 		const elements = document.querySelectorAll(".fadeinz");
 
 		const observer = new IntersectionObserver(
@@ -30,6 +37,17 @@
 
 <svelte:head>
 	<link rel="icon" href="./favicon.ico?v=2" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMLJ7CQJ15"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-KMLJ7CQJ15");
+	</script>
 </svelte:head>
 
 <div id="smooth-wrapper">

@@ -39,13 +39,14 @@
 		flex: none;
 
 		img {
-			--w: 458px;
+			--w: 420px;
 			width: var(--w);
 			height: calc(var(--w) * 0.844);
 			/* min-width: 450px; */
 			border: none;
 			outline: none;
-			border-radius: 8px;
+			border-radius: 4px;
+			object-fit: cover;
 		}
 	}
 
