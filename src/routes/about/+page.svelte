@@ -32,7 +32,7 @@
 			<p class="pretext">Who we are</p>
 			<div class="boy fadeinz">
 				<div>
-					<h2>Reyhan Tresslar</h2>
+					<h2>Reyhan Tressler</h2>
 					<p>
 						<strong
 							>Reyhan is a passionate mentor with a lifelong interest in all things electronic.</strong
@@ -246,6 +246,10 @@
 				connect learning to the real world. That's why everything we create is hands-on,
 				classroom-ready, and built to grow with your teaching.
 			</p>
+
+			<div class="signatures">
+				<img width="128px" src={`${base}/images/allan.svg`} />
+			</div>
 		</div>
 	</section>
 </main>
@@ -483,6 +487,10 @@
 	}
 	.content-container {
 		margin-top: 0;
+	}
+
+	.signatures {
+		margin-top: 3rem;
 	}
 
 	@media screen and (max-width: 1000px) {
