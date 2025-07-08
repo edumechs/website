@@ -74,7 +74,7 @@
 
 <section>
 	<div class="video-container fade-in-up">
-		<video src={`${base}/videos/cell_showcase.mp4`} autoplay muted loop></video>
+		<video src={`${base}/videos/cell_showcase.mp4`} autoplay muted loop playsinline></video>
 	</div>
 	<CellAnim />
 </section>
