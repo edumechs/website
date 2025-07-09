@@ -34,11 +34,6 @@
 				<div>
 					<h2>Reyhan Tressler</h2>
 					<p>
-						<strong
-							>Reyhan is a passionate mentor with a lifelong interest in all things electronic.</strong
-						>
-					</p>
-					<p>
 						Currently studying Electromechanical Engineering at Humber Polytechnic, Reyhan Tressler
 						brings boundless energy — whether he's mentoring at the Barrett Centre for Innovation
 						and Technology, climbing walls, or teeing off on the golf course.
@@ -56,11 +51,6 @@
 			<div class="boy reverse fadeinz">
 				<div>
 					<h2>Andrew Allan</h2>
-					<p>
-						<strong
-							>Andrew is a passionate mentor with a lifelong interest in all things electronic.</strong
-						>
-					</p>
 					<p>
 						Andrew is currently studying Electromechanical Engineering at Humber Polytechnic. During
 						his studies, he worked part-time at the Barrett Centre for Technology Innovation (BCTI)
