@@ -39,14 +39,15 @@
 						>
 					</p>
 					<p>
-						Before co-founding EDU MECHS, he studied mechatronics at Humber Polytechnic. Between
-						classes he worked part-time at the Barrett Centre for Technology Innovation located at
-						the North Campus.
+						Currently studying Electromechanical Engineering at Humber Polytechnic, Reyhan Tressler
+						brings boundless energy — whether he's mentoring at the Barrett Centre for Innovation
+						and Technology, climbing walls, or teeing off on the golf course.
 					</p>
 					<p>
-						During his time at the BCTI, Reyhan would reach thousands of young minds while
-						delivering STEM-based workshops, with content including mechatronics, programming, 3D
-						design, and more.
+						Drawing from his experience teaching Physics, Electrical Circuitry, Design, and Robotics
+						to youth, Reyhan co-founded EDU MECHS to fill a crucial gap in hands-on STEM education.
+						His mission: to empower the next generation with real-world engineering skills that
+						stick.
 					</p>
 				</div>
 				<img class="big" src="reyhan.jpeg" />
@@ -61,14 +62,16 @@
 						>
 					</p>
 					<p>
-						Before co-founding EDU MECHS, he studied mechatronics at Humber Polytechnic. Between
-						classes he worked part-time at the Barrett Centre for Technology Innovation located at
-						the North Campus.
+						Andrew is currently studying Electromechanical Engineering at Humber Polytechnic. During
+						his studies, he worked part-time at the Barrett Centre for Technology Innovation (BCTI)
+						at the North Campus.
 					</p>
 					<p>
-						During his time at the BCTI, Andrew would reach thousands of young minds while
-						delivering STEM-based workshops, with content including mechatronics, programming, 3D
-						design, and more.
+						While at BCTI, he delivered hands-on STEM workshops to thousands of students, covering
+						topics like mechatronics, programming, 3D design, and emerging technologies. His
+						experience in education and passion for innovation eventually led him to co-found EDU
+						MECHS, an initiative dedicated to empowering the next generation of makers and
+						problem-solvers.
 					</p>
 				</div>
 				<img class="big" src="andrew.jpeg" />
@@ -246,10 +249,6 @@
 				connect learning to the real world. That's why everything we create is hands-on,
 				classroom-ready, and built to grow with your teaching.
 			</p>
-
-			<div class="signatures">
-				<img width="128px" src={`${base}/images/allan.svg`} />
-			</div>
 		</div>
 	</section>
 </main>
@@ -444,19 +443,20 @@
 	}
 
 	img.big {
-		width: 400px;
-		/* min-width: 450px; */
-		/* height: 380px; */
-		aspect-ratio: 450 / 380;
+		width: 100%;
+		max-width: 300px;
 		background-color: #1c193b;
 		border: none;
 		outline: none;
 		border-radius: 8px;
+		aspect-ratio: 1;
+		flex-grow: 0 !important;
 	}
 
 	.boy {
 		display: flex;
-		justify-content: space-between;
+		/* justify-content: space-between; */
+		align-items: start;
 		gap: 2rem;
 		margin-bottom: 12rem;
 	}
@@ -474,10 +474,6 @@
 		justify-content: end;
 	}
 
-	img {
-		object-fit: cover;
-	}
-
 	.pretext {
 		margin: 4rem 0 6rem 0;
 	}
@@ -487,10 +483,6 @@
 	}
 	.content-container {
 		margin-top: 0;
-	}
-
-	.signatures {
-		margin-top: 3rem;
 	}
 
 	@media screen and (max-width: 1000px) {
@@ -537,11 +529,11 @@
 
 		img.big {
 			width: 300px;
-			aspect-ratio: 450 / 380;
 			background-color: #1c193b;
 			border: none;
 			outline: none;
 			border-radius: 8px;
+			object-fit: cover;
 		}
 
 		.hero {

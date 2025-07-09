@@ -79,7 +79,7 @@
 
 	.feature .description {
 		opacity: 0.8;
-		max-width: 400px;
+		max-width: 450px;
 	}
 
 	@media screen and (max-width: 1000px) {

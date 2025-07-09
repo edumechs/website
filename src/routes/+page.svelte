@@ -24,23 +24,24 @@
 <section class="features-1">
 	<FeatureGroup
 		title={`The mechatronics learning kit that <span style="color: #6DA5FE">grows with you</span>`}
-		description="Connect to students while it matters most. Studies show that the best time to teach about mechatronics is as early as possible."
+		description="Inspire students when it matters most by laying a hands-on foundation in math, physics, and logic through real-world engineering systems they can build, wire, and control themselves."
 		features={[
 			{
 				title: "Input and output",
 				description:
-					"Learn about the importance of input and output (I/O) and its use in the industry",
+					"Discover how inputs and outputs power the world around us — from everyday devices to advanced automation. Learn how they form the foundation for understanding sensors and control systems.",
 				icon: IconSettingsInput
 			},
 			{
-				title: "Electricity and circuit flow",
+				title: "Wiring and circuitry",
 				description:
-					"Become familiar with electrical wiring, and visualize how electricity might move throughout a circuit",
+					"Get hands-on with electrical wiring and see how components truly work — using easy-to-connect, stackable systems designed for learning and exploration.",
 				icon: IconBolt
 			},
 			{
-				title: "Bernouilli's Principle",
-				description: "Understand how air moves and how to control it using pneumatic systems",
+				title: "Control systems",
+				description:
+					"Advance your skills and explore how control systems work — through hands-on experience with timers, relay logic, and holding circuits.",
 				icon: IconAir
 			}
 		]}
@@ -53,18 +54,19 @@
 		features={[
 			{
 				title: "Interactive, personalized guides",
-				description: "Easy-to-use guides that are tailored specifically to your classroom needs",
+				description: "Easy-to-use guides that are tailored specifically to your classroom needs.",
 				icon: IconQuickReference
 			},
 			{
-				title: "Comprehensive documentation",
-				description: "Everything that is included in your kit has extensive documentation",
+				title: "Custom lesson builder",
+				description:
+					"Use our software to create personalized lesson plans tailored to your class size, subject, and schedule. Fast, flexible, and built for real classrooms.",
 				icon: IconBook
 			},
 			{
 				title: "Educator workshops",
 				description:
-					"Our team is available to deliver an educator workshop to demonstrate effective use of the kit",
+					"Our team is available to deliver an educator workshop to demonstrate effective use of the kit.",
 				icon: IconOpenJam
 			}
 		]}
@@ -73,27 +75,38 @@
 </section>
 
 <section>
-	<div class="video-container fade-in-up">
-		<video src={`${base}/videos/cell_showcase.mp4`} autoplay muted loop playsinline></video>
-	</div>
+	<!-- <div class="video-container fade-in-up">
+		<video
+			onclick={() => {
+				return false;
+			}}
+			src={`${base}/videos/cell_showcase.mp4`}
+			autoplay
+			muted
+			loop
+			playsinline
+		></video>
+	</div> -->
 	<CellAnim />
 </section>
 
 <style>
 	.video-container {
 		height: 450px;
-	}
-	video {
-		object-fit: cover;
-		/* opacity: 0.5; */
-		filter: brightness(30%);
-		width: 101%;
-		height: 101%;
-		transition: filter 1s;
-	}
 
-	video:hover {
-		filter: brightness(70%);
+		& video {
+			object-fit: cover;
+			/* opacity: 0.5; */
+			filter: brightness(30%);
+			width: 101%;
+			height: 101%;
+			transition: filter 1s;
+			margin-left: -1px;
+		}
+
+		& video:hover {
+			filter: brightness(70%);
+		}
 	}
 
 	.features-1 {

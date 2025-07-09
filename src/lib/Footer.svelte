@@ -31,7 +31,7 @@
 						<img src="linkedin.svg" />
 					</button>
 				</a>
-				<a href="javascript:void" class="social-link">
+				<!-- <a href="javascript:void" class="social-link">
 					<button class="primary">
 						<img src="facebook.svg" />
 					</button>
@@ -40,7 +40,7 @@
 					<button class="primary">
 						<img src="instagram.svg" />
 					</button>
-				</a>
+				</a> -->
 			</div>
 		</div>
 		<span class="reserved-mobile">© 2025 EDU MECHS. All Rights Reserved</span>

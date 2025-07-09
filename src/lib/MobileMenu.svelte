@@ -17,7 +17,7 @@
 		<li><a href="about">About Us</a></li>
 		<!-- <li><a href="#">Our Mission</a></li> -->
 		<li><a href={`${base}/waitlist`}>Waitlist</a></li>
-		<!-- <li><a href={`${base}/pricing`}>Pricing</a></li> -->
+		<li><a href={`${base}/pricing`}>Pricing</a></li>
 		<li><a href={`${base}/contact`}>Contact</a></li>
 	</ul>
 </nav>

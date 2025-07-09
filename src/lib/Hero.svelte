@@ -1,9 +1,9 @@
 <script>
-	import Model from './Model.svelte';
-	import { base } from '$app/paths';
+	import Model from "./Model.svelte";
+	import { base } from "$app/paths";
 </script>
 
-<section class="fade-in-up">
+<section class="root fade-in-up">
 	<div>
 		<h1>Wiring the <span class="highlight">next generation</span></h1>
 		<p>
@@ -16,19 +16,48 @@
 		</a>
 	</div>
 
-	<video src="cell.mp4" muted autoplay loop playsinline></video>
+	<div class="video-container fade-in-up">
+		<video
+			onclick={() => {
+				return false;
+			}}
+			src={`${base}/videos/cell_showcase.mp4`}
+			autoplay
+			muted
+			loop
+			playsinline
+		></video>
+	</div>
+	<!-- <video src="cell.mp4" muted autoplay loop playsinline></video> -->
 
 	<!-- <Model /> -->
 </section>
 
 <style>
-	video {
-		/* isolation: isolate !important;
-		-webkit-appearance: none !important; */
-		border-radius: 8px;
-		width: 400px;
+	.root {
+		position: relative;
+	}
 
-		transition: 250ms width;
+	.video-container {
+		position: absolute;
+		height: 450px;
+		left: 0;
+		top: 0;
+
+		width: 100%;
+		height: 100%;
+
+		z-index: -1;
+
+		& video {
+			object-fit: cover;
+			/* opacity: 0.5; */
+			filter: brightness(20%);
+			width: 101%;
+			height: 101%;
+			transition: filter 1s;
+			margin-left: -1px;
+		}
 	}
 
 	section {
@@ -41,21 +70,27 @@
 		height: 80vh;
 		min-height: 500px;
 		max-height: 640px;
+		text-align: center;
 		/* background-color: var(--accent); */
 	}
 
 	h1 {
-		color: var(--accent);
+		color: var(--light-text);
 		margin: 0;
 	}
 
 	p {
-		color: var(--accent);
+		color: var(--light-text);
 		max-width: 600px;
 	}
 
 	.primary {
 		margin-top: 1rem;
+	}
+
+	.primary {
+		border: 1px solid #6da5fe;
+		color: #6da5fe;
 	}
 
 	.highlight {
