@@ -14,7 +14,7 @@
 				<span class="highlight">priced for access</span>
 			</h1>
 			<p>
-				EDU MECHS is designed to fit real teaching environments and real school budgets, making
+				EDU MECHS is designed to fit real teaching environments and school budgets, making
 				hands-on learning more accessible to more students
 			</p>
 			<a href={`${base}/contact`}>
